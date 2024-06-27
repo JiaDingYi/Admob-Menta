@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'AdmobDemo_Example' do
+  pod 'AdmobDemo', :path => '../'
+
+  target 'AdmobDemo_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
