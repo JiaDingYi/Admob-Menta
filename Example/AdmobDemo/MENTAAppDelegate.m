@@ -7,12 +7,30 @@
 //
 
 #import "MENTAAppDelegate.h"
+#import "MENTAViewController.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
+
+@interface MENTAAppDelegate ()
+
+@property (nonatomic, strong) MENTAViewController *initialVc;
+@property (nonatomic, strong) UINavigationController *navVC;
+
+@end
 
 @implementation MENTAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.initialVc = [[MENTAViewController alloc] init];
+    self.navVC = [[UINavigationController alloc] initWithRootViewController:self.initialVc];
+    self.window.rootViewController = self.navVC;
+    [self.window makeKeyAndVisible];
+    
+    [GADMobileAds.sharedInstance startWithCompletionHandler:nil];
+    
     return YES;
 }
 
