@@ -30,13 +30,16 @@
     NSLog(@"%@", credential.settings);
     NSLog(@"%ld", credential.format);
     
+    NSString *jsonStr = credential.settings[@"parameter"];
+    NSDictionary *jsonDic = [self parseJsonParameters:jsonStr];
+    
     MentaAdSDK *menta = [MentaAdSDK shared];
     if (menta.isInitialized) {
         return;
     }
-    [menta setLogLevel:kMentaLogLevelDebug];
+    [menta setLogLevel:kMentaLogLevelError];
     
-    [menta startWithAppID:@"A0004" appKey:@"510cc7cdaabbe7cb975e6f2538bc1e9d" finishBlock:^(BOOL success, NSError * _Nullable error) {
+    [menta startWithAppID:jsonDic[@"appID"] appKey:jsonDic[@"appKey"] finishBlock:^(BOOL success, NSError * _Nullable error) {
         if (success) {
             [[MentaLogger stdLogger] info:@"menta sdk init success"];
         } else {
@@ -84,16 +87,24 @@
     self.loadCompletionHandler = completionHandler;
     
     NSString *jsonStr = adConfiguration.credentials.settings[@"parameter"];
-    NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *error;
-    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    NSDictionary *jsonDic = [[self class] parseJsonParameters:jsonStr];
     
-    if (error) {
-        self.adEventDelegate = self.loadCompletionHandler(nil, error);
-    }
-    self.banner = [[MentaMediationBanner alloc] initWithPlacementID:jsonDict[@"placementId"]];
+    self.banner = [[MentaMediationBanner alloc] initWithPlacementID:jsonDic[@"placementID"]];
     self.banner.delegate = self;
     [self.banner loadAd];
+}
+
+#pragma mark - private
+
++ (NSDictionary *)parseJsonParameters:(NSString *)jsonString {
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    if (error) {
+        return nil;
+    } else {
+        return jsonDict.copy;
+    }
 }
 
 #pragma mark - GADMediationBannerAd

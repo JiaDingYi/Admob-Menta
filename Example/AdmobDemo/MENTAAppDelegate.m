@@ -29,7 +29,9 @@
     self.window.rootViewController = self.navVC;
     [self.window makeKeyAndVisible];
     
-    [GADMobileAds.sharedInstance startWithCompletionHandler:nil];
+    [GADMobileAds.sharedInstance startWithCompletionHandler:^(GADInitializationStatus * _Nonnull status) {
+        
+    }];
     
     return YES;
 }
