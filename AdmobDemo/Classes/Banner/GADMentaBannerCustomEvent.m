@@ -6,10 +6,9 @@
 //
 
 #import "GADMentaBannerCustomEvent.h"
-#import <GoogleMobileAds/GoogleMobileAds.h>
 #import <MentaMediationGlobal/MentaMediationGlobal-umbrella.h>
 
-@interface GADMentaBannerCustomEvent () <MentaMediationBannerDelegate, GADMediationAdapter, GADMediationBannerAd>
+@interface GADMentaBannerCustomEvent () <MentaMediationBannerDelegate>
 
 @property (nonatomic, strong) MentaMediationBanner *banner;
 @property (nonatomic, strong) UIView *bannerView;
@@ -26,6 +25,7 @@
     // This is where you initialize the SDK that this custom event is built
     // for. Upon finishing the SDK initialization, call the completion handler
     // with success.
+    // {"appID":"A0004","appKey":"510cc7cdaabbe7cb975e6f2538bc1e9d","placementID" : "P0026"}
     GADMediationCredentials *credential = configuration.credentials.firstObject;
     NSLog(@"%@", credential.settings);
     NSLog(@"%ld", credential.format);
