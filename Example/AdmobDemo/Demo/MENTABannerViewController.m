@@ -50,7 +50,7 @@
     GADAdSize adaptiveSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth);
     // In this case, we instantiate the banner with desired ad size.
     self.bannerView = [[GADBannerView alloc] initWithAdSize:adaptiveSize];
-    self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2435281174";
+    self.bannerView.adUnitID = @"ca-app-pub-9454875840803246/8487274075";
     self.bannerView.rootViewController = self;
     self.bannerView.delegate = self;
 

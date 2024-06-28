@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		098B15F32C2E813000AD68BE /* MENTABannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098B15F12C2E813000AD68BE /* MENTABannerViewController.m */; };
+		098B15F52C2E858D00AD68BE /* GoogleMobileAdsMediationMenta.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 098B15F42C2E858D00AD68BE /* GoogleMobileAdsMediationMenta.podspec */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -40,10 +41,10 @@
 /* Begin PBXFileReference section */
 		098B15F02C2E813000AD68BE /* MENTABannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MENTABannerViewController.h; sourceTree = "<group>"; };
 		098B15F12C2E813000AD68BE /* MENTABannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MENTABannerViewController.m; sourceTree = "<group>"; };
+		098B15F42C2E858D00AD68BE /* GoogleMobileAdsMediationMenta.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GoogleMobileAdsMediationMenta.podspec; path = ../GoogleMobileAdsMediationMenta.podspec; sourceTree = "<group>"; };
 		29B21CCFE5D95CD6C78D33CC /* Pods-AdmobDemo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdmobDemo_Example.debug.xcconfig"; path = "Target Support Files/Pods-AdmobDemo_Example/Pods-AdmobDemo_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3273A699F5F16FDFD72B32C8 /* Pods_AdmobDemo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdmobDemo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B35CCF06759CBBC8F1F3A91 /* Pods_AdmobDemo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdmobDemo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48922BACD8E61F7F17DE6186 /* AdmobDemo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AdmobDemo.podspec; path = ../AdmobDemo.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* AdmobDemo_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdmobDemo_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -191,7 +192,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				48922BACD8E61F7F17DE6186 /* AdmobDemo.podspec */,
+				098B15F42C2E858D00AD68BE /* GoogleMobileAdsMediationMenta.podspec */,
 				89DF1EFDAD1522FA867202A6 /* README.md */,
 				91E7D89291D72405CCBCFBCE /* LICENSE */,
 			);
@@ -220,7 +221,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				8973B4A8F72E5F6516400CD8 /* [CP] Embed Pods Frameworks */,
 				079BB7CA3B18E8ACD799C4F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -298,6 +298,7 @@
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				098B15F52C2E858D00AD68BE /* GoogleMobileAdsMediationMenta.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,10 +320,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AdmobDemo_Example/Pods-AdmobDemo_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Google-Mobile-Ads-SDK/GoogleMobileAdsResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUserMessagingPlatform/UserMessagingPlatformResources.bundle",
 				"${PODS_ROOT}/MentaVlionGlobal/Resource/VlionGlobal.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMobileAdsResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UserMessagingPlatformResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VlionGlobal.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,30 +355,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8973B4A8F72E5F6516400CD8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdmobDemo_Example/Pods-AdmobDemo_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AdmobDemo/AdmobDemo.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AdmobDemo.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdmobDemo_Example/Pods-AdmobDemo_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ED364DCD7B6DBB02DCEA14A8 /* [CP] Check Pods Manifest.lock */ = {
@@ -541,6 +522,7 @@
 				GCC_PREFIX_HEADER = "AdmobDemo/AdmobDemo-Prefix.pch";
 				INFOPLIST_FILE = "AdmobDemo/AdmobDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST)) /usr/lib/swift";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.admob.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -559,6 +541,7 @@
 				GCC_PREFIX_HEADER = "AdmobDemo/AdmobDemo-Prefix.pch";
 				INFOPLIST_FILE = "AdmobDemo/AdmobDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST)) /usr/lib/swift";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.admob.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
