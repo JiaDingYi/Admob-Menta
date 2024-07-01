@@ -13,9 +13,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'AdmobDemo/Classes/**/*'
   
-  s.dependency 'MentaVlionGlobal', '1.0.0'
-  s.dependency 'MentaMediationGlobal', '1.0.0'
-  s.dependency 'MentaVlionGlobalAdapter', '1.0.0'
+  s.dependency 'MentaVlionGlobal',         '1.0.0'
+  s.dependency 'MentaMediationGlobal',     '1.0.0'
+  s.dependency 'MentaVlionGlobalAdapter',  '1.0.0'
   s.dependency 'Google-Mobile-Ads-SDK'
   
 end
