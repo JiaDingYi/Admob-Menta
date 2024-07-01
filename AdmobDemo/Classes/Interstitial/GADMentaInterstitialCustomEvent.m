@@ -138,7 +138,7 @@
 // 广告素材渲染失败
 - (void)menta_interstitialRenderFailureWithError:(NSError *)error interstitial:(MentaMediationInterstitial *)interstitial {
     NSLog(@"%s", __func__);
-    self.adEventDelegate = self.loadCompletionHandler(nil, error);
+    [self.adEventDelegate didFailToPresentWithError:error];
 }
 
 // 广告即将展示
