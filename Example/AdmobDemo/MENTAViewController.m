@@ -26,10 +26,10 @@
     
     
     self.demoArray = [@[
-        @[@"banner", @"MENTABannerViewController"],
-        @[@"interstitial", @"MentaRewardVideoViewController"],
-        @[@"native", @"MENTANativeViewController"],
-        @[@"rewarded", @"MentaNativeExpressViewController"]] mutableCopy];
+        @[@"banner",       @"MENTABannerViewController"],
+        @[@"interstitial", @"MENTAInterstitialViewController"],
+        @[@"native",       @"MENTANativeViewController"],
+        @[@"rewarded",     @"MENTARewardedVideoViewController"]] mutableCopy];
 
     [self.view addSubview:self.tableView];
     self.tableView.frame = self.view.bounds;
