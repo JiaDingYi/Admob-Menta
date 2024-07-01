@@ -41,7 +41,7 @@
 
 - (void)loadAd {
     GADRequest *request = [GADRequest request];
-    [GADRewardedAd loadWithAdUnitID:@"ca-app-pub-3940256099942544/1712485313"
+    [GADRewardedAd loadWithAdUnitID:@"ca-app-pub-9454875840803246/6411813061"
                             request:request
                   completionHandler:^(GADRewardedAd *ad, NSError *error) {
         if (error) {
