@@ -27,8 +27,8 @@
     // with success.
     // {"appID":"A0004","appKey":"510cc7cdaabbe7cb975e6f2538bc1e9d","placementID" : "P0026"}
     GADMediationCredentials *credential = configuration.credentials.firstObject;
-    NSLog(@"%@", credential.settings);
-    NSLog(@"%ld", credential.format);
+//    NSLog(@"%@", credential.settings);
+//    NSLog(@"%ld", credential.format);
     
     NSString *jsonStr = credential.settings[@"parameter"];
     NSDictionary *jsonDic = [self parseJsonParameters:jsonStr];
