@@ -7,6 +7,11 @@ platform :ios, '12.0'
 target 'AdmobDemo_Example' do
   pod 'GoogleMobileAdsMediationMenta', :path => '../'
   
+  pod 'MentaBaseGlobal', :path => '/Users/jdy/Desktop/Menta-Global/'
+  pod 'MentaMediationGlobal',   :path => '/Users/jdy/Desktop/Menta-Global/'
+  pod 'MentaVlionGlobal',     :path => '/Users/jdy/Desktop/Menta-Global/'
+  pod 'MentaVlionGlobalAdapter', :path => '/Users/jdy/Desktop/Menta-Global/'
+  
   target 'AdmobDemo_Tests' do
     inherit! :search_paths
 

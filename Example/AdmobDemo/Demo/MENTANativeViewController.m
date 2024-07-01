@@ -43,7 +43,7 @@
 
 - (void)loadAd {
     [self.nativeAdView removeFromSuperview];
-    self.gadLoader = [[GADAdLoader alloc] initWithAdUnitID:@"ca-app-pub-3940256099942544/3986624511"
+    self.gadLoader = [[GADAdLoader alloc] initWithAdUnitID:@"ca-app-pub-9454875840803246/1354093358"
                                        rootViewController:self
                                                   adTypes:@[ GADAdLoaderAdTypeNative ]
                                                   options:@[]];
