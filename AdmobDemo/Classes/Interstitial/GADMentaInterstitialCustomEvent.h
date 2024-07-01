@@ -6,10 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GADMentaInterstitialCustomEvent : NSObject
+@interface GADMentaInterstitialCustomEvent : NSObject <GADMediationAdapter, GADMediationInterstitialAd>
 
 @end
 
