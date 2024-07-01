@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		092D24652C3243FE008E50FC /* MENTANativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D24642C3243FE008E50FC /* MENTANativeViewController.m */; };
 		092D24672C32554A008E50FC /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092D24662C32554A008E50FC /* NativeAdView.xib */; };
+		092D24722C32975E008E50FC /* MENTAInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D24712C32975E008E50FC /* MENTAInterstitialViewController.m */; };
+		092D24752C32976B008E50FC /* MENTARewardedVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D24742C32976B008E50FC /* MENTARewardedVideoViewController.m */; };
 		098B15F32C2E813000AD68BE /* MENTABannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098B15F12C2E813000AD68BE /* MENTABannerViewController.m */; };
 		098B15F52C2E858D00AD68BE /* GoogleMobileAdsMediationMenta.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 098B15F42C2E858D00AD68BE /* GoogleMobileAdsMediationMenta.podspec */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -44,6 +46,10 @@
 		092D24632C3243FE008E50FC /* MENTANativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MENTANativeViewController.h; sourceTree = "<group>"; };
 		092D24642C3243FE008E50FC /* MENTANativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MENTANativeViewController.m; sourceTree = "<group>"; };
 		092D24662C32554A008E50FC /* NativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
+		092D24702C32975E008E50FC /* MENTAInterstitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MENTAInterstitialViewController.h; sourceTree = "<group>"; };
+		092D24712C32975E008E50FC /* MENTAInterstitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MENTAInterstitialViewController.m; sourceTree = "<group>"; };
+		092D24732C32976B008E50FC /* MENTARewardedVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MENTARewardedVideoViewController.h; sourceTree = "<group>"; };
+		092D24742C32976B008E50FC /* MENTARewardedVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MENTARewardedVideoViewController.m; sourceTree = "<group>"; };
 		098B15F02C2E813000AD68BE /* MENTABannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MENTABannerViewController.h; sourceTree = "<group>"; };
 		098B15F12C2E813000AD68BE /* MENTABannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MENTABannerViewController.m; sourceTree = "<group>"; };
 		098B15F42C2E858D00AD68BE /* GoogleMobileAdsMediationMenta.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GoogleMobileAdsMediationMenta.podspec; path = ../GoogleMobileAdsMediationMenta.podspec; sourceTree = "<group>"; };
@@ -112,6 +118,10 @@
 				098B15F12C2E813000AD68BE /* MENTABannerViewController.m */,
 				092D24632C3243FE008E50FC /* MENTANativeViewController.h */,
 				092D24642C3243FE008E50FC /* MENTANativeViewController.m */,
+				092D24702C32975E008E50FC /* MENTAInterstitialViewController.h */,
+				092D24712C32975E008E50FC /* MENTAInterstitialViewController.m */,
+				092D24732C32976B008E50FC /* MENTARewardedVideoViewController.h */,
+				092D24742C32976B008E50FC /* MENTARewardedVideoViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -396,9 +406,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				098B15F32C2E813000AD68BE /* MENTABannerViewController.m in Sources */,
+				092D24752C32976B008E50FC /* MENTARewardedVideoViewController.m in Sources */,
 				6003F59E195388D20070C39A /* MENTAAppDelegate.m in Sources */,
 				092D24652C3243FE008E50FC /* MENTANativeViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* MENTAViewController.m in Sources */,
+				092D24722C32975E008E50FC /* MENTAInterstitialViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
