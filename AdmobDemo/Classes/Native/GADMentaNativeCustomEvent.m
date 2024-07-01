@@ -119,9 +119,13 @@
     if (nativeSelfRenderAds.count <= 0) {
         return;
     }
-    MentaMediationNativeSelfRenderModel *mentaNativeModel = nativeSelfRenderAds.firstObject;
-    self.nativeAdModel = mentaNativeModel;
-    [self downloadImg];
+    
+    self.nativeAdModel = nativeSelfRenderAds.firstObject;
+    if (self.nativeAdModel.isVideo) {
+        self.adEventDelegate = self.loadCompletionHandler(self, nil);
+    } else {
+        [self downloadImg];
+    }
 }
 
 - (void)menta_nativeSelfRenderLoadFailure:(NSError *)error
