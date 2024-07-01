@@ -28,7 +28,7 @@
     self.demoArray = [@[
         @[@"banner", @"MENTABannerViewController"],
         @[@"interstitial", @"MentaRewardVideoViewController"],
-        @[@"native", @"MentaBannerViewController"],
+        @[@"native", @"MENTANativeViewController"],
         @[@"rewarded", @"MentaNativeExpressViewController"]] mutableCopy];
 
     [self.view addSubview:self.tableView];
