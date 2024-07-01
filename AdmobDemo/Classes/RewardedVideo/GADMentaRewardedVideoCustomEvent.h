@@ -6,10 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GADMentaRewardedVideoCustomEvent : NSObject
+@interface GADMentaRewardedVideoCustomEvent : NSObject <GADMediationAdapter, GADMediationRewardedAd>
 
 @end
 
