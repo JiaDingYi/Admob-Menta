@@ -16,3 +16,82 @@ platform :ios do
     sh "./pgyer_upload.sh -k 9a57e69885455c0dd7c80c02f6d438a5 ../Build/AdmobDemo_Example.ipa"
   end
 end
+
+platform :ios do
+  # 定义一个新的lane来批量发布多个SDK
+  lane :PublishMultipleSDKs do
+    # 列出所有要发布的SDK名称
+    # MentaTanxSDK 为特殊sdk，手动发布
+    sdk_names = [
+      "GoogleMobileAdsMediationMenta",
+    ]
+    pod_versions = [
+      "1.0.4", 
+    ] # 假设每个SDK对应一个版本号，确保顺序匹配
+    ali_yun_access_key_id = ENV["ALIYUN_ACCESS_KEY_ID"]
+    ali_yun_access_key_secret = ENV["ALIYUN_ACCESS_KEY_SECRET"]
+    is_test = ENV["IS_TEST"]
+    # 遍历SDK名称数组
+    sdk_names.each_with_index do |sdk_name, index|
+      # 调用之前定义的PublishSingleSDK lane来发布当前SDK
+      PublishSingleSDK(sdk_name: sdk_name, pod_version: pod_versions[index], ali_yun_access_key_id: ali_yun_access_key_id, ali_yun_access_key_secret: ali_yun_access_key_secret, is_test: is_test )
+
+      UI.message "完成发布 #{sdk_name} 版本 #{pod_versions[index]}"
+    end
+  end
+
+  lane :PublishSingleSDK do |options|
+    sdk_name = options[:sdk_name]
+    pod_version = options[:pod_version]
+
+    # 获取当前时间
+    current_time = Time.now
+    # 生成时间戳，格式为 YYYYMMDDHHMMSS
+    timestamp = current_time.strftime("%Y%m%d%H%M%S")
+    source_file = "#{sdk_name}-#{pod_version}-#{timestamp}.tar.bz2"
+    UI.message "source_file is #{source_file}"
+
+    # 生成xcframework
+    sh "./build_framework.sh #{sdk_name}"
+
+    # compress and upload to aliyun oss
+    fastlane_require "aliyun/oss"
+    fastlane_require "retries"
+    Dir.chdir("../Build") do
+      sh "tar -cjf #{source_file} #{sdk_name}"
+      with_retries(max_tries: 3) do
+        client = Aliyun::OSS::Client.new(
+          :endpoint => "http://oss-cn-beijing.aliyuncs.com",
+          :access_key_id => options[:ali_yun_access_key_id],
+          :access_key_secret => options[:ali_yun_access_key_secret]
+        )
+        client.get_bucket("bj-menta-sdk").put_object("iOS/#{sdk_name}/#{pod_version}/#{source_file}", :file => "#{source_file}")
+      end
+    end
+
+    #edit podspec
+    source_url = "https://bj-menta-sdk.oss-cn-beijing.aliyuncs.com/iOS/#{sdk_name}/#{pod_version}/#{source_file}"
+    source_spec = "../#{sdk_name}.podspec"
+    new_spec = "../Build/#{sdk_name}.podspec"
+    FileUtils.cp(source_spec, new_spec)
+    UI.success("spec file copied successfully!")
+    
+    # modify podspec
+    podspec_content = File.read(new_spec)
+    podspec_content = podspec_content.sub(/s.version.+$/, "s.version = '#{pod_version}' ")
+    podspec_content = podspec_content.sub(/s.source.+$/, "s.source = { :http => '#{source_url}' } ")
+    podspec_content = podspec_content.sub(/s.source_files.+$/, "s.vendored_frameworks = '*.xcframework'")
+    File.open(new_spec, "w") { |file| file.puts podspec_content }
+    
+    Dir.chdir("../Build") do 
+      # pod trunk push
+      with_retries(max_tries: 3) do
+        if options[:is_test]
+          sh "bundle exec pod repo push Menta #{sdk_name}.podspec --verbose --allow-warnings --skip-import-validation"
+        else 
+          sh "bundle exec pod trunk push #{sdk_name}.podspec --verbose --allow-warnings --skip-import-validation --synchronous" 
+        end
+      end
+    end
+  end
+end

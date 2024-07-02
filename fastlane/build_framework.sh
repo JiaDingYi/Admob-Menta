@@ -4,7 +4,7 @@
 echo "Start Build..."
 
 FRAMEWORK_NAME="$1"
-WORKSPACE_NAME="Menta-Global"
+WORKSPACE_NAME="AdmobDemo"
 SCHEME_NAME="$1"
 CONFIGURATION='Release'
 
