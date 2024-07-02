@@ -6,6 +6,7 @@ platform :ios, '12.0'
 
 target 'AdmobDemo_Example' do
   pod 'GoogleMobileAdsMediationMenta', :path => '../'
+  # pod 'GoogleMobileAdsMediationMenta'
   
 #  pod 'MentaBaseGlobal', :path => '/Users/jdy/Desktop/Menta-Global/'
 #  pod 'MentaMediationGlobal',   :path => '/Users/jdy/Desktop/Menta-Global/'
