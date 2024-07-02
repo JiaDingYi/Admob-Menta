@@ -18,6 +18,9 @@ DerivedData
 *.hmap
 *.ipa
 
+fastlane/README.md
+fastlane/report.xml
+
 # Bundler
 .bundle
 
