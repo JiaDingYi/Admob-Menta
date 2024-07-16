@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license          = 'Custom'
   s.author           = { 'zy' => 'wzy2010416033@163.com' }
   
-  s.source           = { :git => 'https://github.com/jdy/AdmobDemo.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/JiaDingYi/Admob-Menta.git', :tag => s.version.to_s }
   s.static_framework = true
   s.ios.deployment_target = '12.0'
 
