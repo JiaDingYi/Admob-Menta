@@ -1,20 +1,20 @@
 PODS:
-  - Google-Mobile-Ads-SDK (11.6.0):
+  - Google-Mobile-Ads-SDK (11.7.0):
     - GoogleUserMessagingPlatform (>= 1.1)
-  - GoogleMobileAdsMediationMenta (1.0.4):
+  - GoogleMobileAdsMediationMenta (1.0.6):
     - Google-Mobile-Ads-SDK
-    - MentaMediationGlobal (= 1.0.4)
-    - MentaVlionGlobal (= 1.0.4)
-    - MentaVlionGlobalAdapter (= 1.0.4)
+    - MentaMediationGlobal (= 1.0.6)
+    - MentaVlionGlobal (= 1.0.6)
+    - MentaVlionGlobalAdapter (= 1.0.6)
   - GoogleUserMessagingPlatform (2.5.0)
-  - MentaBaseGlobal (1.0.4)
-  - MentaMediationGlobal (1.0.4):
-    - MentaBaseGlobal (= 1.0.4)
-  - MentaVlionGlobal (1.0.4):
-    - MentaBaseGlobal (= 1.0.4)
-  - MentaVlionGlobalAdapter (1.0.4):
-    - MentaMediationGlobal (= 1.0.4)
-    - MentaVlionGlobal (= 1.0.4)
+  - MentaBaseGlobal (1.0.6)
+  - MentaMediationGlobal (1.0.6):
+    - MentaBaseGlobal (= 1.0.6)
+  - MentaVlionGlobal (1.0.6):
+    - MentaBaseGlobal (= 1.0.6)
+  - MentaVlionGlobalAdapter (1.0.6):
+    - MentaMediationGlobal (= 1.0.6)
+    - MentaVlionGlobal (= 1.0.6)
 
 DEPENDENCIES:
   - GoogleMobileAdsMediationMenta (from `../`)
@@ -33,13 +33,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Google-Mobile-Ads-SDK: 28339250757645a9bab066ebbe667fa48d2c9bd7
-  GoogleMobileAdsMediationMenta: cf0af2537c0d5df9d9eea2def1c2ad820924c732
+  Google-Mobile-Ads-SDK: 204b517c9765169144cf39763c7f5d23c57a9db0
+  GoogleMobileAdsMediationMenta: 6deee60a713ea02d66a4b19093d56fa50270bf73
   GoogleUserMessagingPlatform: 6b4f48a370e77ce121d034c908cc6ee4fdafaf13
-  MentaBaseGlobal: dbb29b8e6020fdb550f83fa72dce86532c7fa757
-  MentaMediationGlobal: 913b7b5c8c25ed33d2669b31ca2d135f26a341d9
-  MentaVlionGlobal: a1c08a345369a7f14cf65baa46f181cecf8e3ec9
-  MentaVlionGlobalAdapter: d6c28983dabdd1f3fbc7ca0b2e55883199041dcb
+  MentaBaseGlobal: 198de767626d7d5b8ccb923b7e7f510959333700
+  MentaMediationGlobal: bba343950b6b12bb45840f27f6240da4eae982bc
+  MentaVlionGlobal: 1dfe6e81d57e6e2fa9060ead509c1645a654d447
+  MentaVlionGlobalAdapter: bed501822bd5bd8a87bbfe1fb0a5257710c2b7ce
 
 PODFILE CHECKSUM: 72ece17a8554b72b45816bec469bb67fa55b7b54
 
