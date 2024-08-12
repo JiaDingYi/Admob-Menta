@@ -1,20 +1,20 @@
 PODS:
   - Google-Mobile-Ads-SDK (11.7.0):
     - GoogleUserMessagingPlatform (>= 1.1)
-  - GoogleMobileAdsMediationMenta (1.0.6):
+  - GoogleMobileAdsMediationMenta (1.0.9):
     - Google-Mobile-Ads-SDK
-    - MentaMediationGlobal (= 1.0.6)
-    - MentaVlionGlobal (= 1.0.6)
-    - MentaVlionGlobalAdapter (= 1.0.6)
+    - MentaMediationGlobal (~> 1.0.9)
+    - MentaVlionGlobal (~> 1.0.9)
+    - MentaVlionGlobalAdapter (~> 1.0.9)
   - GoogleUserMessagingPlatform (2.5.0)
-  - MentaBaseGlobal (1.0.6)
-  - MentaMediationGlobal (1.0.6):
-    - MentaBaseGlobal (= 1.0.6)
-  - MentaVlionGlobal (1.0.6):
-    - MentaBaseGlobal (= 1.0.6)
-  - MentaVlionGlobalAdapter (1.0.6):
-    - MentaMediationGlobal (= 1.0.6)
-    - MentaVlionGlobal (= 1.0.6)
+  - MentaBaseGlobal (1.0.9)
+  - MentaMediationGlobal (1.0.9):
+    - MentaBaseGlobal (~> 1.0.9)
+  - MentaVlionGlobal (1.0.9):
+    - MentaBaseGlobal (~> 1.0.9)
+  - MentaVlionGlobalAdapter (1.0.9):
+    - MentaMediationGlobal (~> 1.0.9)
+    - MentaVlionGlobal (~> 1.0.9)
 
 DEPENDENCIES:
   - GoogleMobileAdsMediationMenta (from `../`)
@@ -34,12 +34,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 204b517c9765169144cf39763c7f5d23c57a9db0
-  GoogleMobileAdsMediationMenta: 6deee60a713ea02d66a4b19093d56fa50270bf73
+  GoogleMobileAdsMediationMenta: 8bcea039d482488f03a66783a3801157bb02e9ec
   GoogleUserMessagingPlatform: 6b4f48a370e77ce121d034c908cc6ee4fdafaf13
-  MentaBaseGlobal: 198de767626d7d5b8ccb923b7e7f510959333700
-  MentaMediationGlobal: bba343950b6b12bb45840f27f6240da4eae982bc
-  MentaVlionGlobal: 1dfe6e81d57e6e2fa9060ead509c1645a654d447
-  MentaVlionGlobalAdapter: bed501822bd5bd8a87bbfe1fb0a5257710c2b7ce
+  MentaBaseGlobal: c9d89f30cf9931a49871e13ddc32f70182bb08e2
+  MentaMediationGlobal: f2ae37a0e5b7f783389fe81dee1d525a294d49b2
+  MentaVlionGlobal: 41b8d0d17ca8aec27b0b7b8653d7ee166dc591af
+  MentaVlionGlobalAdapter: 89f7cf18fdab11284db1054463a7b94682d87236
 
 PODFILE CHECKSUM: 72ece17a8554b72b45816bec469bb67fa55b7b54
 
